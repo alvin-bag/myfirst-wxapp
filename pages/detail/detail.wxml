@@ -1,0 +1,45 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <swiper class="slides" indicator-dots="true" indicator-color="#f0f0f0" indicator-active-color="#7c7c80">
+    <swiper-item class="images" wx:for="{{ shops[0].images }}" wx:key="index">
+      <image class="img" src="{{item}}" mode="aspectFill" bindtap="showgallery"></image>
+    </swiper-item>
+  </swiper>
+  <view class="info">
+    <text class="name">{{shops[0].name}}</text>
+    <view class="phone">
+      <mp-icon type="outline" icon="mobile-contacts" color="#ed0c39"></mp-icon>
+      <text>{{shops[0].phone}}</text>
+    </view>
+    <view class="address">
+      <mp-icon type="outline" icon="location" color="#ed0c39"></mp-icon>
+      <text>{{shops[0].address}}</text>
+    </view>
+    <view class="time">
+      <mp-icon type="outline" icon="time" color="#ed0c39"></mp-icon>
+      <text>{{shops[0].businessHours}}</text>
+    </view>
+  </view>
+  <view class="comment">
+    <view class="item" wx:for="{{shops[0].comments}}" wx:key="date">
+      <view class="header">
+        <text class="user">用户：{{item.name}}</text>
+        <text class="posttime">{{item.date}}</text>
+      </view>
+      <text class="rating">评分：{{item.rating}}</text>
+      <text class="content">{{item.content}}</text>
+      <view class="images">
+        <view wx:for="{{item.images}}" wx:key="index">
+          <image src="{{format.size(item)}}"></image>
+        </view>
+      </view>
+      <wxs module="format">
+        module.exports = {
+          size:function(input){
+            return input.replace("w.h","100.100")
+          }
+        }
+      </wxs>
+    </view>
+  </view>
+</view>

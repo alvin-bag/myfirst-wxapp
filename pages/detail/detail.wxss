@@ -1,0 +1,80 @@
+/* pages/detail/detail.wxss */
+@import "../../weui-miniprogram/icon/icon.wxss";
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+.slides {
+  width:100%;
+  height:480rpx
+}
+
+.slides .images {
+  width: 100%;
+  height: 480rpx;
+}
+
+.img {
+  display: inline-block;
+  width: 100%;
+  height:100%
+}
+.info{
+  width:100%;
+  margin-top:15rpx;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 5px 4px rgba(187, 186, 186, 0.4)
+}
+.name{
+  font-weight: bold;
+  font-size: 18px
+}
+.phone,.address,.time{
+  margin:5rpx 0;
+  width: 100%;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center
+}
+.item{
+  width:100%;
+  margin-top:15rpx;
+  box-shadow: 0px 5px 4px rgba(187, 186, 186, 0.4);
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px
+}
+.header{
+  display: flex;
+  justify-content: space-between
+}
+.header .posttime{
+  color:#969494;
+  font-size: 13px
+}
+.comment .rating{
+  font-size: 13px;
+  padding-top: 5px
+}
+.comment .content{
+  text-indent:20px;
+  font-size: 13px;
+  padding-top: 5px
+}
+.comment .images{
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 5px
+}
+.comment .images image{
+  display: inline-block;
+  width:150rpx;
+  height: 150rpx;
+  border-radius: 25px;
+  padding: 5px
+}

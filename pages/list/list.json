@@ -1,0 +1,9 @@
+{
+  "backgroundColor": "#e6e6e6e",
+  "usingComponents":{
+    "mp-loading":"../weui-miniprogram/loading/loading",
+    "mp-navigation-bar":"../weui-miniprogram/navigation-bar/navigation-bar"
+  },
+  "onReachBottomDistance":50,
+  "enablePullDownRefresh":true
+  }

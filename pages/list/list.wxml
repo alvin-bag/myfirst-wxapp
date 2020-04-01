@@ -1,0 +1,21 @@
+<view class="search">
+  <input placeholder="输入商家、商品名称" placeholder-style="font-size:12px" style="padding-left:10px" bindconfirm="changehandle" value = "{{ inputvalue }}"></input>
+  <icon type="search" bindtap="changehandle"></icon>
+</view>
+<navigator url="{{'/pages/detail/detail?id=' + item.id + '&categoriesid=' +  categories.id }}" class="list" wx:for="{{shops}}" wx:key = "index">
+  <view class="img">
+    <image src="{{item.images[0]}}"></image>
+  </view>
+  <view class="info">
+    <text class="name">{{item.name}}</text>
+    <text class="address"> 地址：{{item.address}}</text>
+    <text class="phone">电话：{{item.phone}}</text>
+    <text class="time"> 营业时间：{{item.businessHours}}</text>
+  </view>
+  <view class="commentcount">
+    <view class="count">{{item.score}}</view>
+  </view>
+</navigator>
+<view class="loadingmore" wx:if="{{hasmore}}">
+  <mp-loading type="circle"></mp-loading>
+</view>

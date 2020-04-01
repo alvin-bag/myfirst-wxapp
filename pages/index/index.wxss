@@ -1,0 +1,46 @@
+
+@import "../..//weui-miniprogram/loading/loading.wxss";
+.slides{
+  width:100%
+}
+.slides image{
+  width: 100%
+}
+.grids{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20rpx;
+  box-shadow: 0 20px 0.7 #000;
+}
+.item{
+  width: 250rpx;
+  height: 250rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(223, 219, 219);
+  border-right: 1px solid rgb(223, 219, 219);
+  box-sizing: border-box
+}
+.item image{
+  display: inline-block;
+  width:35%;
+  height:83rpx;
+  margin-bottom:20rpx
+}
+.item text{
+  font-size: 26rpx
+}
+.extend {
+  display: flex;
+  justify-content: space-between
+}
+.extend view{
+  width:50%
+}
+.extend image{
+  display: block;
+  width:100%;
+  height:180rpx
+}
